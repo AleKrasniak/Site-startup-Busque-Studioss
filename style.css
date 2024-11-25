@@ -1,0 +1,977 @@
+/* Estilos Gerais */
+html, body {
+    height: 100%;
+    margin: 0;
+    width: 100%;
+    background-color: #ffffff;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh; /* Garante que o layout ocupe toda a altura da viewport */
+}
+
+
+p::first-letter {
+    padding-left: 30px; /* paragrafo espaço */
+
+}
+
+/*----------------------HEADER-------------------------*/
+
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px; /* Espaçamento proporcional */
+    background: linear-gradient(to bottom, #002f75, #003B94,#0557b4 );
+    background-color: #003B94;
+    color: white;
+    height: 180px;
+    width: 100%;
+    box-sizing: border-box; /* Inclui padding e bordas na largura */
+    overflow: hidden; /* esconde excessos*/
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+
+}
+
+.logoesquerda {
+    width: 52%;
+    height: auto;
+    margin: 0 auto;    
+    position: relative;
+    margin-left: -2%;
+}
+
+
+
+/* Menu */
+.menu {
+    display: flex;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin: 0 15px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 2.8rem; 
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 8px 20px; 
+    transition: background-color 0.5s ease, transform 0.3s ease; 
+    border-radius: 20px; /*pra não aparecer o quadradão na trasição*/
+    display: inline-block; /* pra aumentar o tamanho se não não funfa o scale */
+}
+
+.menu ul li a:hover {
+    background-color: #fffcb5;
+    color: black;
+    border-radius: 20px;
+    transform: scale(1.2); 
+}
+
+/*IMAGEM BEM VINDO*/
+
+.bemvindo img {
+    width: 100%;
+}
+
+/*-------------------ESTILOS DO CONTEÚDO-------------------*/
+main {
+    word-wrap: break-word; /* Quebra o texto para não estourar a largura */
+    background-color: #ffffff;
+    max-width: 80%; /* Máxima largura para telas largas */
+    margin: 0 auto;
+    padding: 20px;
+    flex-grow: 1; /* O conteúdo principal cresce para preencher o espaço disponível */
+    min-height: 0; /* Garante que o conteúdo não estique excessivamente */
+}
+
+.conteudo {
+    position: relative;
+    width: 100%;
+    height: 100%; /* ocupa toda a altura da tela */
+    display: flex; /* alinhamento central */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente */
+}
+
+/* Configuração da imagem */
+.conteudo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; /* ajusta para cobrir a tela sem distorção */
+    z-index: -1; /* coloca a imagem atrás do texto */
+}
+
+/* Configuração do texto */
+.introducao {
+    position: relative;
+    color: white;
+    font-size: 3.2rem;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-radius: 10px; 
+    max-width: 80%; /*largura do texto */
+}
+.introducao b {
+    color: #fffcb5;
+}
+
+/* CONTEUDO MISSAO E SEUS CAPANGAS */ 
+.missaoeamigos {
+    display: flex; /* alinha as divs horizontalmente */
+    justify-content: center; /* centraliza as divs horizontalmente */
+    align-items: center; /* centraliza as divs verticalmente */
+    gap: 40px; 
+    padding-top: 6%;
+    margin-top: 50px; 
+    width: 100%; /* div ocupa toda a largura */
+
+
+}
+
+.missao, .visao, .valores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 30%; /* Controla o tamanho das divs */
+}
+
+.missao img, .visao img, .valores img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.missao h3, .visao h3, .valores h3 {
+    margin: 5px 0;
+    font-size: 2.8rem;
+    color: #003B94;
+}
+
+.missao p, .visao p, .valores p {
+    font-size: 2.6rem;
+    color: black;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+/*LOGOOOO */
+
+.imagemlogos {
+    display: flex; /* lado a lado */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; /* eentraliza verticalmente */
+    gap: 10%; /* espaço entre os blocoes */
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 8px; 
+}
+
+.imagemlogos div {
+    text-align: center; /* centraliza o conteúdo de cada bloco */
+}
+
+
+.texttexto {
+    display: flex; /* flexbox para centralizar o texto */
+    flex-direction: column; /* centraliza o conteúdo verticalmente */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;     /* centraliza verticalmente */
+    height: 100%;
+    margin-left: 5%;
+    text-align: center;
+    white-space: nowrap
+
+}
+.imgazul{
+    margin-left: 10%;
+}
+
+.textoazulimg{
+    margin-left: -15%;
+}
+.textlogo {
+    display: flex; /* flexbox para centralizar o texto */
+    flex-direction: column; /* centraliza o conteúdo verticalmente */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;     /* centraliza verticalmente */
+    height: 100%;
+    margin-left: -26%;
+    text-align: center;
+    white-space: nowrap
+}
+
+.imagemlogos p {
+    margin-top: 10px; 
+    font-size: 2.4rem;
+    color: black; 
+    text-align: center; 
+
+}
+
+/*CORESSS*/
+.quadrados {
+    display: flex; /* lado a lado */
+    gap: 12%; /* espaço entre os quadrados */
+    margin-top: 5%; 
+    margin-bottom: 5%;
+    justify-content: center; /* centra quadrados horizontalmente */
+    align-items: center; /* alinha verticalmente */
+    flex-wrap: wrap; /* quebra os quadrados em linhas se faltar espaço */
+}
+
+.quadrado {
+    width: 100%; 
+    max-width: 600px; 
+    height: 180px; 
+    display: flex; /*  centralizar o texto */
+    justify-content: center; /* horizontalmente */
+    align-items: center; /*  verticalmente */
+    border-radius: 8px; 
+    border: 2px solid #333; 
+    text-align: center; 
+}
+
+.quadrado.amarelo {
+    background-color: #fffa84; /* Cor de fundo amarela */
+    color: #003B94; /* Cor do texto */
+}
+
+.quadrado.azul {
+    background-color: #003b94; /* Cor de fundo azul */
+    color: #fffa84; /* Cor do texto */
+}
+
+.quadrado p {
+    font-size: 2.3rem;
+    font-weight: bold; /* Texto em negrito */
+    margin: 0; /* Remove espaçamento extra */
+}
+
+
+
+
+/*------SEGMENTO ---------*/
+
+.segmento {
+  
+    padding-top: 6%;
+    margin-top: 50px; 
+    text-align: center; 
+
+}
+
+.Retail h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5rem; 
+    font-weight: bold; 
+    color: #003B94;
+    margin-bottom: 10px; 
+}
+
+.Retail p {
+    text-align: justify;
+    font-size: 2.8rem; 
+    color: black; 
+    line-height: 1.6; /* espaço entre linhas */
+    max-width: 1200px; 
+    margin: 0 auto; /* centraliza o texto */
+    text-align: justify;
+}
+
+/* ---------------SOBRE HTML----------------SOBRE HTML---------------------------------------------SOBRE HTML ----------------------------------SOBRE HTML------------------------------------------------------*/
+/* INTRUDÇÃO A ALE (EUKKK)*/
+
+.sobre img {
+    width: 100%;
+}
+
+.ale p {
+    margin-right: 60px;
+    border: 7px solid transparent;
+    border-image: linear-gradient(to right, #003B94, #9c9eb9) 1;
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 2.9rem;
+    text-align: justify;
+}
+.ale {
+    display: flex; /* flexbox para alinhar a imagem e o texto lado a lado */
+    align-items: center; /* alinha verticalmente a imagem e o texto */
+    gap: 5%; /* entre a imagem e o texto */
+    padding: 20px;
+
+}
+.ale img {
+    width: 40%; /* Define a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 50%; /* Deixa a imagem redonda */
+}
+
+/*REDES CURRICULO */
+
+.redes {
+    display: flex; /* Alinha as divs horizontalmente */
+    justify-content: center; /* Centraliza as divs na tela */
+    gap: 1%; /* Espaço entre as divs */
+    margin-top: 2%; /* Espaçamento superior */
+    margin-bottom: 5%;
+}
+
+.link-item {
+    display: flex; /* Usando flexbox para alinhar a imagem e o link */
+    align-items: center; /* Alinha verticalmente os itens */
+    gap: 10px; /* Espaço entre a imagem e o título */
+}
+
+.redes img{
+    width: 28%; /* Tamanho fixo para a imagem */
+    height: auto; /* Mantém a proporção */
+
+}
+
+
+.linkedin, .lattes {
+    display: flex;
+    text-align: left; /* alinha p esquerda */
+    width: 400px; 
+}
+
+.linkedin h3, .lattes h3 {
+    font-size: 1.9rem; 
+    color: #003B94; 
+    margin: 0; 
+
+}
+
+.linkedin a, .lattes a {
+    text-decoration: none; /* remove o sublinhado feiao */
+    color: #003B94;
+    font-weight: bold; 
+    transition: color 0.3s ease; 
+    
+}
+
+.linkedin a:hover, .lattes a:hover {
+    color: #1476e6; /* Cor de destaque ao passar o mouse */
+    font-size: 2.1rem;
+}
+/* TEXTO SOBRE A STARTUP */
+.sobrebusque {
+    text-align: center; 
+    padding: 20px;
+    border-radius: 10px; 
+}
+
+.sobrebusque img {
+    width: 100%; 
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; 
+    margin-bottom: 20px; 
+}
+
+.sobrebusque p {
+    border: 7px solid transparent;
+    border-image: linear-gradient(to right, #003B94, #9c9eb9) 1;
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 3.0rem; 
+    color: BLACK; 
+    line-height: 1.6; /* espaçamento entre as linhas */
+    max-width: 1200px; /* limita a largura do texto */
+    margin: 0 auto; /* centraliza o texto */
+    text-align: justify;
+}
+
+
+/*------HTML DO SERVIÇOS--------------HTML DO SERVIÇOS ----- HTML DO SERVIÇOS----------HTML DO SERVIÇOS---------HTML DO SERVIÇOS---------*/
+
+.imgserv img {
+    width: 100%;
+}
+
+.servicos {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fffcb5;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #333;
+}
+
+.servicos h2 {
+    color: #003B94;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.servicos b {
+    color:#003B94;
+}
+
+.servicos ul {
+    text-align: justify;
+    font-size: 2.8rem;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    color: black;
+}
+
+.servicos ul li {
+    margin-bottom: 10px;
+}
+
+.botao {
+    text-align: center;
+
+}
+
+.buscar {
+    display: inline-block; /* para que o link se comporte como um botão */
+    background-color: #003B94;
+    margin-top: 20px;
+    color: white;
+    text-decoration: none; /* remove o sublinhado feio*/
+    border: none;
+    padding: 15px 30px; 
+    border-radius: 10px; 
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    text-align: center; /* centraliza o texto no botão */
+}
+
+.buscar:hover {
+    background-color: #0056b3;
+    color: #fffa84;
+    transform: scale(1.1);
+}
+
+
+/*ESTILO PAGINA DE BUSCA */
+
+.buscacidade {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fffcb5;
+    border-radius: 8px;
+    max-width: 45%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.buscacidade h1 {
+    color: #002C70;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.search label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+    color: black;
+}
+
+.search select {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color:#333;
+}
+
+.search button {
+    background-color: #003B94;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search button:hover {
+    background-color: #0056b3;
+    color: #fffa84;
+    transform: scale(1.1);
+}
+
+
+/*PAGINA DE PONTA GROSSA*/
+
+.resultados {
+    display: flex;
+    flex-wrap: wrap; /*reorganizem em telas menores */
+    gap: 10%; 
+    justify-content: center; 
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Estilo de cada estúdio */
+.estudio {
+    background-color: #fffcb5;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    max-width: 600px; /* Define uma largura máxima */
+    text-align: center;
+    flex: 1; /* Faz com que cada div ocupe o mesmo espaço */
+    min-width: 250px; /* Define uma largura mínima */
+    
+}
+
+.estudio img {
+    width: 100%; /* Imagem ocupa toda a largura da div */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.estudio h3 {
+    font-size: 2.8rem;
+    color: #003B94;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+
+.estudio p {
+    text-align: center;
+    font-size: 2.4rem;
+    color: black;
+    margin-bottom: 15px;
+}
+
+/* Estilo do botão */
+.vermais {
+    display: inline-block;
+    background-color: #003B94;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 2.4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.vermais:hover {
+    background-color: #0056b3;
+    color: #fffa84;
+    transform: scale(1.1);
+}
+
+/*---------------HTML DO ESTUDIOPG 1 E 2 ------------------------------*/
+
+.portfolio {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .carrossel {
+    position: relative;
+    width: 100%;
+    height:auto;
+    overflow: hidden;
+  }
+
+  .carrosselimg {
+    display: flex;
+    width: 2000px;
+    height: auto;
+    animation: slide 9s infinite;
+  }
+
+  .carrosselimg img {
+    width: 100%;
+    height: auto;
+  }
+
+  @keyframes slide {
+    0%, 25% { transform: translateX(0); }          /*1 imagem */
+    25.1%, 50% { transform: translateX(-500px); } /*2 imagem */
+    50.1%, 75% { transform: translateX(-1000px); }/*3 imagem*/
+    75.1%, 100% { transform: translateX(-1500px); }/*4 imagem */
+  }
+
+  .infostudio {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .infostudio h3 {
+    margin: 10px 0;
+    font-size: 2.4rem;
+    color: #003B94;
+  }
+
+  .infostudio p {
+    font-size: 2rem;
+    color: black;
+  }
+
+  .avaliacao {
+    padding: 20px;
+    background: #fffcb5;
+    text-align: center;
+    border-top: 1px solid #ddd;
+  }
+
+  .avaliacao h4 {
+    margin: 0 0 10px;
+    font-size: 2rem;
+    color: #003B94;
+  }
+
+  .estrelas {
+    color: #003B94;
+    font-size: 2.2rem;
+    margin: 5px 0;
+  }
+
+  .avaliacao p {
+    font-size: 2rem;
+    color: black;
+  }
+
+  .comentarios {
+    padding: 20px;
+    text-align: left;
+    border-top: 1px solid #ddd;
+  }
+
+  .comentarios h4 {
+    margin-bottom: 10px;
+    font-size: 2.4rem;
+    color: #003B94;
+  }
+
+  .comentarios p {
+    margin: 5px 0;
+    font-size: 2.2rem;
+    color: black;
+    line-height: 1.4;
+    margin-top: 20px;
+  }
+
+  .endereco {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: #fffcb5;
+  }
+
+  .endereco img {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 8px;
+  }
+
+  .endereco div {
+    font-size: 2rem;
+    color: black;
+  }
+
+
+/*FOOOTTTTTTEEEERRR*/
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px; /* Espaçamento proporcional */
+    background: linear-gradient(to bottom, #002f75, #003B94,#0557b4 );
+    background-color: #003B94;
+    color: white;
+    height: 180px;
+    width: 100%;
+    box-sizing: border-box; /* Inclui padding e bordas na largura */
+    overflow: hidden; /* esconde excessos*/
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.info p {
+    font-size: 1.5rem;
+}
+
+
+.com-footer footer { /*CODIGO SO PRA ARRUMAR A PAGINA DE BUSCA QUE RAIVA */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px; /* Ajuste o padding conforme necessário */
+    background: linear-gradient(to bottom, #002f75, #003B94, #0557b4);
+    background-color: #003B94;
+    color: white;
+    height: 180px; /* Ajuste a altura do footer conforme necessário */
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute; /* Fixa o footer */
+    bottom: 0; /* Coloca o footer no final da página */
+    left: 0;
+}
+
+.com-footer main {
+    flex: 1;
+}
+
+
+/*-------------------RESPONSIVIDADE-------------------*/
+
+
+
+/* Responsividade para telas menores */
+@media (max-width: 1440px) {
+    .cabecalho {
+        height: 100px;
+        padding: 20px;
+    }
+
+    .logoesquerda {
+        width: 150px;
+    }
+
+    .nomelogo {
+        width: 180px;
+    }
+
+    .introducao {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .cabecalho {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 20px;
+    }
+
+    .logo {
+        justify-content: center;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .logoesquerda {
+        width: 80px;
+    }
+
+    .nomelogo {
+        width: 120px;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu ul li {
+        margin: 10px 0;
+    }
+
+    .introducao {
+        font-size: 1.3rem;
+    }
+
+    .conteudo img {
+        max-width: 400px;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .logoesquerda {
+        width: 40px;
+    }
+
+    .nomelogo {
+        width: 100px;
+    }
+
+    .menu ul li a {
+        font-size: 0.9em;
+    }
+
+    .introducao {
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+
+    .missaoeamigos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .missao, .visao, .valores {
+        width: 80%;
+    }
+
+    .missao img, .visao img, .valores img {
+        width: 150px;
+    }
+
+    .missao h3, .visao h3, .valores h3 {
+        font-size: 1em;
+    }
+
+    .missao p, .visao p, .valores p {
+        font-size: 0.9em;
+    }
+
+    .buscacidade {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    .buscacidade h1 {
+        font-size: 20px;
+    }
+
+    .search select,
+    .search button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .estudio, .portfolio {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .carrosselimg {
+        width: 2000px;
+    }
+
+    .infostudio h3, .avaliacao h4, .comentarios h4 {
+        font-size: 2rem;
+    }
+
+    .infostudio p, .avaliacao p, .comentarios p, .endereco div {
+        font-size: 1.8rem;
+    }
+
+    .estrelas {
+        font-size: 2rem;
+    }
+
+    .endereco {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .endereco img {
+        margin-bottom: 10px;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logoesquerda {
+        width: 35px;
+    }
+
+    .nomelogo {
+        width: 80px;
+    }
+
+    .menu ul li a {
+        font-size: 0.8em;
+    }
+
+    .introducao {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .missao, .visao, .valores {
+        width: 100%;
+    }
+
+    .missao img, .visao img, .valores img {
+        width: 120px;
+    }
+
+    .buscacidade h1 {
+        font-size: 18px;
+    }
+
+    .search button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .infostudio h3, .avaliacao h4, .comentarios h4 {
+        font-size: 1.8rem;
+    }
+
+    .infostudio p, .avaliacao p, .comentarios p, .endereco div {
+        font-size: 1.6rem;
+    }
+
+    .estrelas {
+        font-size: 1.8rem;
+    }
+
+    .endereco img {
+        max-width: 250px;
+    }
+}
